@@ -1,0 +1,154 @@
+name: Release
+
+on:
+  release:
+    types: [created]
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-notarize:
+    name: Build, Notarize & Upload
+    runs-on: macos-26
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - name: Import Certificate
+        env:
+          CERTIFICATE_BASE64: ${{ secrets.APPLE_CERTIFICATE_BASE64 }}
+          CERTIFICATE_PASSWORD: ${{ secrets.CERTIFICATE_PASSWORD }}
+          KEYCHAIN_PASSWORD: ${{ secrets.CERTIFICATE_PASSWORD }}
+        run: |
+          # Create a temporary keychain
+          KEYCHAIN_PATH=$RUNNER_TEMP/app-signing.keychain-db
+
+          security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security default-keychain -s "$KEYCHAIN_PATH"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+
+          # Import certificate
+          CERTIFICATE_PATH=$RUNNER_TEMP/certificate.p12
+          echo "$CERTIFICATE_BASE64" | base64 --decode > "$CERTIFICATE_PATH"
+          security import "$CERTIFICATE_PATH" \
+            -P "$CERTIFICATE_PASSWORD" \
+            -A \
+            -t cert \
+            -f pkcs12 \
+            -k "$KEYCHAIN_PATH"
+
+          # Allow codesign to access the key
+          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+
+      - name: Build App
+        run: |
+          xcodebuild \
+            -scheme "Claude Monitor" \
+            -configuration Release \
+            -destination "generic/platform=macOS" \
+            -derivedDataPath $RUNNER_TEMP/DerivedData \
+            CODE_SIGN_IDENTITY="-" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Sign App
+        env:
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        run: |
+          APP_PATH="$RUNNER_TEMP/DerivedData/Build/Products/Release/Claude Monitor.app"
+          IDENTITY="Developer ID Application: Timothy Morgan ($APPLE_TEAM_ID)"
+
+          # Sign all nested frameworks and binaries first (innermost to outermost)
+          find "$APP_PATH/Contents/Frameworks" -type f -perm +111 -exec \
+            /usr/bin/codesign --force --options runtime --sign "$IDENTITY" --timestamp {} \; 2>/dev/null || true
+
+          find "$APP_PATH/Contents/Frameworks" -name "*.framework" -exec \
+            /usr/bin/codesign --force --options runtime --sign "$IDENTITY" --timestamp {} \; 2>/dev/null || true
+
+          find "$APP_PATH/Contents/Frameworks" -name "*.dylib" -exec \
+            /usr/bin/codesign --force --options runtime --sign "$IDENTITY" --timestamp {} \; 2>/dev/null || true
+
+          # Sign the main app bundle
+          /usr/bin/codesign --force --options runtime --sign "$IDENTITY" \
+            --timestamp \
+            "$APP_PATH"
+
+          # Verify the signature
+          codesign --verify --verbose --deep "$APP_PATH"
+
+      - name: Notarize App
+        env:
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_ID_PASSWORD: ${{ secrets.APPLE_ID_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        run: |
+          APP_PATH="$RUNNER_TEMP/DerivedData/Build/Products/Release/Claude Monitor.app"
+
+          # Store credentials
+          xcrun notarytool store-credentials "notarytool-profile" \
+            --apple-id "$APPLE_ID" \
+            --team-id "$APPLE_TEAM_ID" \
+            --password "$APPLE_ID_PASSWORD"
+
+          # Create ZIP for notarization
+          ditto -c -k --keepParent "$APP_PATH" $RUNNER_TEMP/Claude-Monitor-notarize.zip
+
+          # Submit for notarization and wait
+          SUBMISSION_OUTPUT=$(xcrun notarytool submit $RUNNER_TEMP/Claude-Monitor-notarize.zip \
+            --keychain-profile "notarytool-profile" \
+            --wait 2>&1) || true
+          echo "$SUBMISSION_OUTPUT"
+
+          # Extract submission ID and check status
+          SUBMISSION_ID=$(echo "$SUBMISSION_OUTPUT" | grep -o 'id: [a-f0-9-]*' | head -1 | cut -d' ' -f2)
+          if echo "$SUBMISSION_OUTPUT" | grep -q "status: Invalid"; then
+            echo "Notarization failed. Fetching log..."
+            xcrun notarytool log "$SUBMISSION_ID" --keychain-profile "notarytool-profile"
+            exit 1
+          fi
+
+          # Staple the notarization ticket
+          xcrun stapler staple "$APP_PATH"
+
+      - name: Create DMG
+        run: |
+          APP_PATH="$RUNNER_TEMP/DerivedData/Build/Products/Release/Claude Monitor.app"
+
+          hdiutil create \
+            -volname "Claude Monitor" \
+            -srcfolder "$APP_PATH" \
+            -ov \
+            -format UDZO \
+            $RUNNER_TEMP/Claude-Monitor.dmg
+
+      - name: Upload to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ runner.temp }}/Claude-Monitor.dmg
+
+      - name: Create Sentry Release
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: timcodes
+          SENTRY_PROJECT: claude-monitor
+        run: |
+          # Install Sentry CLI
+          curl -sL https://sentry.io/get-cli/ | bash
+
+          # Create a release
+          sentry-cli releases new "${{ github.event.release.tag_name }}"
+
+          # Associate commits with the release
+          sentry-cli releases set-commits "${{ github.event.release.tag_name }}" --auto
+
+          # Upload debug symbols (dSYM files)
+          DSYM_PATH="$RUNNER_TEMP/DerivedData/Build/Products/Release/Claude Monitor.app.dSYM"
+          if [ -d "$DSYM_PATH" ]; then
+            sentry-cli debug-files upload --include-sources "$DSYM_PATH"
+          fi
+
+          # Finalize the release
+          sentry-cli releases finalize "${{ github.event.release.tag_name }}"

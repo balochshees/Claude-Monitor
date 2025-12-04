@@ -1,0 +1,4 @@
+.swift-format
+
+# SwiftLint Remote Config Cache
+.swiftlint/RemoteConfigCache

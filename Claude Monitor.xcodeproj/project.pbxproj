@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 90;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01024E652EE1FDF0002CC293 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 01024E642EE1FDF0002CC293 /* Sentry */; };
+		01F78B9E2EE1739B006D357C /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 01F78B9D2EE1739B006D357C /* Logging */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0160FC632EE0CEC3006E6A22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0160FC4D2EE0CEC1006E6A22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0160FC542EE0CEC1006E6A22;
+			remoteInfo = "Claude Monitor";
+		};
+		0160FC6D2EE0CEC3006E6A22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0160FC4D2EE0CEC1006E6A22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0160FC542EE0CEC1006E6A22;
+			remoteInfo = "Claude Monitor";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0160FC552EE0CEC1006E6A22 /* Claude Monitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Claude Monitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0160FC622EE0CEC3006E6A22 /* Claude MonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Claude MonitorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0160FC6C2EE0CEC3006E6A22 /* Claude MonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Claude MonitorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0160FC572EE0CEC1006E6A22 /* Claude Monitor */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Claude Monitor";
+			sourceTree = "<group>";
+		};
+		0160FC652EE0CEC3006E6A22 /* Claude MonitorTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Claude MonitorTests";
+			sourceTree = "<group>";
+		};
+		0160FC6F2EE0CEC3006E6A22 /* Claude MonitorUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Claude MonitorUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0160FC522EE0CEC1006E6A22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				01F78B9E2EE1739B006D357C /* Logging in Frameworks */,
+				01024E652EE1FDF0002CC293 /* Sentry in Frameworks */,
+			);
+		};
+		0160FC5F2EE0CEC3006E6A22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		0160FC692EE0CEC3006E6A22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0160FC4C2EE0CEC1006E6A22 = {
+			isa = PBXGroup;
+			children = (
+				0160FC572EE0CEC1006E6A22 /* Claude Monitor */,
+				0160FC652EE0CEC3006E6A22 /* Claude MonitorTests */,
+				0160FC6F2EE0CEC3006E6A22 /* Claude MonitorUITests */,
+				0160FC562EE0CEC1006E6A22 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0160FC562EE0CEC1006E6A22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0160FC552EE0CEC1006E6A22 /* Claude Monitor.app */,
+				0160FC622EE0CEC3006E6A22 /* Claude MonitorTests.xctest */,
+				0160FC6C2EE0CEC3006E6A22 /* Claude MonitorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0160FC542EE0CEC1006E6A22 /* Claude Monitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0160FC762EE0CEC3006E6A22 /* Build configuration list for PBXNativeTarget "Claude Monitor" */;
+			buildPhases = (
+				0160FC512EE0CEC1006E6A22 /* Sources */,
+				0160FC522EE0CEC1006E6A22 /* Frameworks */,
+				0160FC532EE0CEC1006E6A22 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				0160FC572EE0CEC1006E6A22 /* Claude Monitor */,
+			);
+			name = "Claude Monitor";
+			packageProductDependencies = (
+				01F78B9D2EE1739B006D357C /* Logging */,
+				01024E642EE1FDF0002CC293 /* Sentry */,
+			);
+			productName = "Claude Monitor";
+			productReference = 0160FC552EE0CEC1006E6A22 /* Claude Monitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0160FC612EE0CEC3006E6A22 /* Claude MonitorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0160FC792EE0CEC3006E6A22 /* Build configuration list for PBXNativeTarget "Claude MonitorTests" */;
+			buildPhases = (
+				0160FC5E2EE0CEC3006E6A22 /* Sources */,
+				0160FC5F2EE0CEC3006E6A22 /* Frameworks */,
+				0160FC602EE0CEC3006E6A22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0160FC642EE0CEC3006E6A22 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0160FC652EE0CEC3006E6A22 /* Claude MonitorTests */,
+			);
+			name = "Claude MonitorTests";
+			productName = "Claude MonitorTests";
+			productReference = 0160FC622EE0CEC3006E6A22 /* Claude MonitorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0160FC6B2EE0CEC3006E6A22 /* Claude MonitorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0160FC7C2EE0CEC3006E6A22 /* Build configuration list for PBXNativeTarget "Claude MonitorUITests" */;
+			buildPhases = (
+				0160FC682EE0CEC3006E6A22 /* Sources */,
+				0160FC692EE0CEC3006E6A22 /* Frameworks */,
+				0160FC6A2EE0CEC3006E6A22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0160FC6E2EE0CEC3006E6A22 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0160FC6F2EE0CEC3006E6A22 /* Claude MonitorUITests */,
+			);
+			name = "Claude MonitorUITests";
+			productName = "Claude MonitorUITests";
+			productReference = 0160FC6C2EE0CEC3006E6A22 /* Claude MonitorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0160FC4D2EE0CEC1006E6A22 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2610;
+				LastUpgradeCheck = 2610;
+				TargetAttributes = {
+					0160FC542EE0CEC1006E6A22 = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
+					0160FC612EE0CEC3006E6A22 = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = 0160FC542EE0CEC1006E6A22;
+					};
+					0160FC6B2EE0CEC3006E6A22 = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = 0160FC542EE0CEC1006E6A22;
+					};
+				};
+			};
+			buildConfigurationList = 0160FC502EE0CEC1006E6A22 /* Build configuration list for PBXProject "Claude Monitor" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0160FC4C2EE0CEC1006E6A22;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				01F78B9C2EE1739B006D357C /* XCRemoteSwiftPackageReference "swift-log" */,
+				01024E632EE1FDF0002CC293 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+			);
+			preferredProjectObjectVersion = 90;
+			productRefGroup = 0160FC562EE0CEC1006E6A22 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0160FC542EE0CEC1006E6A22 /* Claude Monitor */,
+				0160FC612EE0CEC3006E6A22 /* Claude MonitorTests */,
+				0160FC6B2EE0CEC3006E6A22 /* Claude MonitorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0160FC532EE0CEC1006E6A22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		0160FC602EE0CEC3006E6A22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		0160FC6A2EE0CEC3006E6A22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0160FC512EE0CEC1006E6A22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		0160FC5E2EE0CEC3006E6A22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		0160FC682EE0CEC3006E6A22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0160FC642EE0CEC3006E6A22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0160FC542EE0CEC1006E6A22 /* Claude Monitor */;
+			targetProxy = 0160FC632EE0CEC3006E6A22 /* PBXContainerItemProxy */;
+		};
+		0160FC6E2EE0CEC3006E6A22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0160FC542EE0CEC1006E6A22 /* Claude Monitor */;
+			targetProxy = 0160FC6D2EE0CEC3006E6A22 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0160FC742EE0CEC3006E6A22 /* Debug configuration for PBXProject "Claude Monitor" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2NFSK2WB24;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		0160FC752EE0CEC3006E6A22 /* Release configuration for PBXProject "Claude Monitor" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2NFSK2WB24;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		0160FC772EE0CEC3006E6A22 /* Debug configuration for PBXNativeTarget "Claude Monitor" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2NFSK2WB24;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Claude Monitor";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "codes.tim.Claude-Monitor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+			};
+			name = Debug;
+		};
+		0160FC782EE0CEC3006E6A22 /* Release configuration for PBXNativeTarget "Claude Monitor" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2NFSK2WB24;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Claude Monitor";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "codes.tim.Claude-Monitor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+			};
+			name = Release;
+		};
+		0160FC7A2EE0CEC3006E6A22 /* Debug configuration for PBXNativeTarget "Claude MonitorTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2NFSK2WB24;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "codes.tim.Claude-MonitorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Claude Monitor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Claude Monitor";
+			};
+			name = Debug;
+		};
+		0160FC7B2EE0CEC3006E6A22 /* Release configuration for PBXNativeTarget "Claude MonitorTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2NFSK2WB24;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "codes.tim.Claude-MonitorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Claude Monitor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Claude Monitor";
+			};
+			name = Release;
+		};
+		0160FC7D2EE0CEC3006E6A22 /* Debug configuration for PBXNativeTarget "Claude MonitorUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2NFSK2WB24;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "codes.tim.Claude-MonitorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				TEST_TARGET_NAME = "Claude Monitor";
+			};
+			name = Debug;
+		};
+		0160FC7E2EE0CEC3006E6A22 /* Release configuration for PBXNativeTarget "Claude MonitorUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2NFSK2WB24;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "codes.tim.Claude-MonitorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				TEST_TARGET_NAME = "Claude Monitor";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0160FC502EE0CEC1006E6A22 /* Build configuration list for PBXProject "Claude Monitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0160FC742EE0CEC3006E6A22 /* Debug configuration for PBXProject "Claude Monitor" */,
+				0160FC752EE0CEC3006E6A22 /* Release configuration for PBXProject "Claude Monitor" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		0160FC762EE0CEC3006E6A22 /* Build configuration list for PBXNativeTarget "Claude Monitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0160FC772EE0CEC3006E6A22 /* Debug configuration for PBXNativeTarget "Claude Monitor" */,
+				0160FC782EE0CEC3006E6A22 /* Release configuration for PBXNativeTarget "Claude Monitor" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		0160FC792EE0CEC3006E6A22 /* Build configuration list for PBXNativeTarget "Claude MonitorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0160FC7A2EE0CEC3006E6A22 /* Debug configuration for PBXNativeTarget "Claude MonitorTests" */,
+				0160FC7B2EE0CEC3006E6A22 /* Release configuration for PBXNativeTarget "Claude MonitorTests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		0160FC7C2EE0CEC3006E6A22 /* Build configuration list for PBXNativeTarget "Claude MonitorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0160FC7D2EE0CEC3006E6A22 /* Debug configuration for PBXNativeTarget "Claude MonitorUITests" */,
+				0160FC7E2EE0CEC3006E6A22 /* Release configuration for PBXNativeTarget "Claude MonitorUITests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		01024E632EE1FDF0002CC293 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		01F78B9C2EE1739B006D357C /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01024E642EE1FDF0002CC293 /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01024E632EE1FDF0002CC293 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
+		};
+		01F78B9D2EE1739B006D357C /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01F78B9C2EE1739B006D357C /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 0160FC4D2EE0CEC1006E6A22 /* Project object */;
+}

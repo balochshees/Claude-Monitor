@@ -1,0 +1,43 @@
+{
+  "fill" : {
+    "solid" : "display-p3:0.85098,0.46667,0.34118,1.00000"
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "fill-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : "none"
+            }
+          ],
+          "image-name" : "menu-icon 2.svg",
+          "name" : "menu-icon 2",
+          "position" : {
+            "scale" : 35,
+            "translation-in-points" : [
+              1.6995000000000573,
+              -33.96074999999996
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "specular" : false,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}
