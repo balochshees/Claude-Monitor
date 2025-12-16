@@ -12,10 +12,6 @@ import Foundation
 /// This protocol enables dependency injection and testability by allowing
 /// views to work with either the production ``UsageViewModel`` or
 /// the ``MockUsageViewModel`` for previews and testing.
-///
-/// ## Conforming Types
-/// - ``UsageViewModel`` — Production implementation with real API calls
-/// - ``MockUsageViewModel`` — Mock implementation for previews
 @MainActor
 protocol UsageViewModelProtocol: AnyObject, Observable {
   // MARK: - Usage State

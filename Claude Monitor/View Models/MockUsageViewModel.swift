@@ -14,15 +14,6 @@ import Observation
 /// with no-op methods, allowing views to be previewed with pre-configured state
 /// without making real API calls.
 ///
-/// ## Static Factory Properties
-/// Use the static properties to get pre-configured instances for common states:
-/// - ``loading`` — Shows loading spinner
-/// - ``withUsageData`` — Shows normal usage data
-/// - ``highUsage`` — Shows high usage with warning colors
-/// - ``noToken`` — Shows the no-token prompt
-/// - ``error`` — Shows an authentication error
-/// - ``networkError`` — Shows a network error
-///
 /// ## Example
 /// ```swift
 /// #Preview("With Usage Data") {

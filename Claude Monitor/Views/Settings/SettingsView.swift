@@ -16,12 +16,6 @@ import SwiftUI
 ///
 /// The view displays appropriate warnings when Claude Code is selected but
 /// no token is found, and provides help text explaining how to obtain tokens.
-///
-/// ## View Hierarchy
-/// - Token source picker
-/// - ``ManualTokenView`` (when manual source selected)
-/// - Warning label (when Claude Code unavailable)
-/// - ``SettingsHelpView``
 struct SettingsView: View {
   @Environment(\.viewModel)
   private var viewModel

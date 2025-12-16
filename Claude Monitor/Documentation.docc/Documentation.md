@@ -8,8 +8,6 @@ Claude Monitor sits in your menu bar and shows your current Claude API usage at 
 
 The app can automatically detect your OAuth token from Claude Code, or you can manually configure a token in settings.
 
-![Claude Monitor showing usage limits](menu-bar-screenshot)
-
 ## Topics
 
 ### Essentials
@@ -27,7 +25,7 @@ The app can automatically detect your OAuth token from Claude Code, or you can m
 
 - ``ClaudeAPIService``
 - ``KeychainService``
-- ``BackgroundRefreshService``
+- ``UsageDataService``
 - ``NotificationService``
 - ``TokenSource``
 

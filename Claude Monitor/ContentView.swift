@@ -15,15 +15,9 @@ import SwiftUI
 /// icon. It composes several child views to display usage data, handle errors,
 /// and provide actions.
 ///
-/// ## View Hierarchy
-/// - ``UsageHeaderView`` — Title and refresh button
-/// - ``UsageContentView`` or ``NoTokenView`` — Main content area
-/// - ``FooterView`` — Token source and last updated time
-/// - ``ActionButtonsView`` — Settings and Quit buttons
-///
 /// ## Environment
 /// The view expects a view model to be provided via `.viewModel(_:)` modifier.
-/// Background refresh is handled by ``BackgroundRefreshService`` at the app level.
+/// Background refresh is handled by ``UsageDataService`` at the app level.
 ///
 /// ## Lifecycle
 /// The view triggers an immediate refresh when it appears (popover opened) and
